@@ -56,6 +56,7 @@ var chainCmd = &cli.Command{
 		chainGasPriceCmd,
 		chainInspectUsage,
 		chainDecodeCmd,
+		chainDisputeSetCmd,
 	},
 }
 
