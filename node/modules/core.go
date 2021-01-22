@@ -80,7 +80,7 @@ func MemoryWatchdog(lr repo.LockedRepo, lc fx.Lifecycle, constraints system.Memo
 	// utilization climbs over 90% of the limit. A maximum of 10 heapdumps
 	// will be captured during life of this process.
 	watchdog.HeapProfileDir = filepath.Join(lr.Path(), "heapprof")
-	watchdog.HeapProfileMaxCaptures = 10
+	watchdog.HeapProfileMaxCaptures = 0 // 10 FIXME
 	watchdog.HeapProfileThreshold = 0.9
 	watchdog.Logger = logWatchdog
 
